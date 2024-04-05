@@ -17,7 +17,7 @@
 #include <xc.h>
 
 #define WAIT_UNTIL_TRIGGER_S 40
-#define ACTIVE_RELAIS_TIME_S 1
+#define ACTIVE_RELAY_TIME_S 1
 
 void main(void)
 {
@@ -29,7 +29,7 @@ void main(void)
         __delay_ms(1000);
     }
     GP5 = 1; //set GPIO HIGH
-    for (uint8_t i = 0; i < ACTIVE_RELAIS_TIME_S; i++)
+    for (uint8_t i = 0; i < ACTIVE_RELAY_TIME_S; i++)
     {
         __delay_ms(1000);
     }
